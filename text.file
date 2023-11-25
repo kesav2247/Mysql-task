@@ -1,0 +1,53 @@
+1. Movie should have multiple media(Video or Image) 
+2. Movie can belongs to multiple Genre 
+3. Movie can have multiple reviews and Review can belongs to a user 
+4. Artist can have multiple skills 
+5. Artist can perform multiple role in a single film
+
+
+* List of Table:
+
+   - Media
+   - Genre
+   - Review
+   - skills
+   - Role
+
+* Relationships:
+
+   -  Genre: One-to-Many
+   -  Review one-to-many
+   -  skills one-to-many
+   -  Role   one-to-many
+
+
+* List of Tables And Columns:
+
+  * Media Table:
+
+   - media_id (Primary Key)
+   - title
+   - genre_id (Foreign Key referencing Genre table)
+
+  * Genre Table:
+
+   - genre_id (Primary Key)
+   - name
+
+  * Review Table:
+
+   - review_id (Primary Key)
+   - media_id (Foreign Key referencing Media table)
+   - user_id (if there's a user table, Foreign Key referencing User table)
+   - rating
+   - comment
+
+  * Skills Table:
+
+   - skill_id (Primary Key)
+   - name
+
+  * Role Table:
+
+   - role_id (Primary Key)
+   - name
